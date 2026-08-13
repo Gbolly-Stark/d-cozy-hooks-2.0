@@ -8,6 +8,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Testimonials from "./components/Testimonial";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer"
+import Cart from "./components/Cart";
+import User from "./components/User";
 
 const App = () => {
   return (
@@ -25,6 +27,39 @@ const App = () => {
               <Testimonials/>
               <CTA />
               <Footer />
+            </main>
+          }
+          
+        />
+        <Route
+          path="/products"
+          element={
+            <main>
+             <Navbar />
+              
+              <Products />
+              <About />
+              <Testimonials/>
+              <CTA />
+              <Footer />
+            </main>
+          }
+        />
+        <Route 
+          path="/user"
+          element={
+            <main>
+              <Navbar />
+              <User />
+            </main>
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <main>
+              <Navbar />
+              <Cart />
             </main>
           }
         />
